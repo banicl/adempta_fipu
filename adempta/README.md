@@ -9,10 +9,12 @@
 
 >[Link na prototip aplikacije](https://www.figma.com/proto/i0ml6Bbj01JNzvXwH3YD41/Adempta?node-id=60%3A19&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=60%3A29)
 
-### Funkcionalnosti: 
-- Odabir grada
-- Odabir linija
-- Pregled linija
-- Prijava i odjava administratora
-- Uređivanje linija (uređivanje postojećih, brisanje, dodavanje novih)
+### Opis funkcionalnosti: 
+- Aplikacija Adempta omogućuje korisnicima lakše pretraživanje i snalaženje u voznom redu autobusa u gradu Puli i drugim gradovima. Korisnicima se nudi mogućnost pretraživanja linija te im aplikacija sama nakon odabira linije izbacuje informaciju o polasku sljedećeg autobusa. 
+- Administratorima aplikacije nudi se mogućnost prijave u samu aplikaciju. Jednom kada se prijave, administratori mogu uređivati autobusne linije. To podrazumijeva uređivanje postojećih, dodavanje novih i brisanje starih linija. Kada administrator završi s radom može se odjaviti i pregledati svoje promjene, ukoliko želi, i kroz sučelje korisnika. 
+
+### Zaduženja: 
+- Leonarda Banić 
+- Marta Tilman
+
 
