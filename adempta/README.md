@@ -16,7 +16,7 @@
 
 ### Zaduženja: 
 - Leonarda Banić 
-   >  izrada funkcionalnosti korisničkog sučelja, izrada administrativnog dijela aplikacije za brisanje i dodavanje linija 
+   >  Izrada funkcionalnosti korisničkog sučelja, izrada administrativnog dijela aplikacije za brisanje i dodavanje linija 
 - Marta Tilman
    > 
 
