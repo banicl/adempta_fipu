@@ -12,9 +12,12 @@
 ### Opis funkcionalnosti: 
 - Aplikacija Adempta omogućuje korisnicima lakše pretraživanje i snalaženje u voznom redu autobusa u gradu Puli i drugim gradovima. Korisnicima se nudi mogućnost pretraživanja linija te im aplikacija sama nakon odabira linije izbacuje informaciju o polasku sljedećeg autobusa. 
 - Administratorima aplikacije nudi se mogućnost prijave u samu aplikaciju. Jednom kada se prijave, administratori mogu uređivati autobusne linije. To podrazumijeva uređivanje postojećih, dodavanje novih i brisanje starih linija. Kada administrator završi s radom može se odjaviti i pregledati svoje promjene, ukoliko želi, i kroz sučelje korisnika. 
+ 
 
 ### Zaduženja: 
 - Leonarda Banić 
+   >  izrada funkcionalnosti korisničkog sučelja, izrada administrativnog dijela aplikacije za brisanje i dodavanje linija 
 - Marta Tilman
+   > 
 
 
