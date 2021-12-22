@@ -1,19 +1,14 @@
-# adempta
+#ADEMPTA
+###Tim 57: Leonarda Banić, Marta Tilman
 
-## Project setup
-```
-npm install
-```
+###Fakultet informatike u Puli
+###Kolegij: Programsko Inženjerstvo
+###Mentor: doc.dr.sc. Nikola Tanković   
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+###Funkcionalnosti: 
+- Odabir grada
+- Odabir linija
+- Pregled linija
+- Prijava i odjava administratora
+- Uređivanje linija (uređivanje postojećih, brisanje, dodavanje novih)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
