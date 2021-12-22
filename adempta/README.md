@@ -18,6 +18,6 @@
 - Leonarda Banić 
    >  Izrada funkcionalnosti korisničkog sučelja, izrada administrativnog dijela aplikacije za brisanje i dodavanje linija 
 - Marta Tilman
-   > 
+   > Dizajn korisničkog sučelja, izrada administrativnog dijela aplikacije za pregled i uređivanje linija i prijava administratora
 
 
