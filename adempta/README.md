@@ -1,5 +1,5 @@
-#ADEMPTA
-###Tim 57: Leonarda Banić, Marta Tilman
+# ADEMPTA
+### Tim 57: Leonarda Banić, Marta Tilman
 
 ###Fakultet informatike u Puli
 ###Kolegij: Programsko Inženjerstvo
