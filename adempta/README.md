@@ -1,11 +1,11 @@
 # ADEMPTA
-### Tim 57: Leonarda Banić, Marta Tilman
+## Tim 57: Leonarda Banić, Marta Tilman
 
-###Fakultet informatike u Puli
-###Kolegij: Programsko Inženjerstvo
-###Mentor: doc.dr.sc. Nikola Tanković   
+### Fakultet informatike u Puli
+### Kolegij: Programsko Inženjerstvo
+### Mentor: doc.dr.sc. Nikola Tanković   
 
-###Funkcionalnosti: 
+### Funkcionalnosti: 
 - Odabir grada
 - Odabir linija
 - Pregled linija
