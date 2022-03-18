@@ -1,18 +1,20 @@
-var firebase = require("firebase/app");
-require("firebase/auth");
-require("firebase/firestore");//korištenje import firestore
-import { initializeApp } from 'firebase/app';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
+import 'firebase/storage';
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAEpu7-QvInRu6wf3v15XKTu6jgsoJYs58",
-    authDomain: "adempta-81060.firebaseapp.com",
-    projectId: "adempta-81060",
-    storageBucket: "adempta-81060.appspot.com",
-    messagingSenderId: "130191613480",
-    appId: "1:130191613480:web:7e3ca22988e6209f1b5f1d"
+    apiKey: "AIzaSyCRghnWl0eIPfXwu7PBSbc_dS7TdzHll2w",
+    authDomain: "adempta-fipu-960af.firebaseapp.com",
+    projectId: "adempta-fipu-960af",
+    storageBucket: "adempta-fipu-960af.appspot.com",
+    messagingSenderId: "460363423744",
+    appId: "1:460363423744:web:f5073d8f37b7c6e35178e5"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export default {
-    firebase, //kljuc i vrijednost
-};
+firebase.initializeApp(firebaseConfig);
+
+let db = firebase.firestore();
+let storage = firebase.storage();
+
+export { firebase, db, storage };
