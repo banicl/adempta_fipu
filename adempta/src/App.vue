@@ -1,33 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/Login">Login</router-link> |
-      <router-link to="/SignUp">Sign Up</router-link>
-    </div>
+    <nav id="nav" class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <ul>
+            <li id="slova1"><a href="/login">LOGIN</a></li>
+
+            <img center src="@/assets/logo_adempta.png" height="42" />
+          </ul>
+        </a>
+      </div>
+    </nav>
     <router-view />
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4ab9ab;
+  border-radius: 8px;
 }
 
-#nav {
-  padding: 30px;
+#slova1 {
+  float: right;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+li a {
+  display: block;
+  color: #449c91;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #f5f4d2;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+li a:hover {
+  background-color: #d2cbb6;
 }
 </style>
+
