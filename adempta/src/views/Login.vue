@@ -1,13 +1,13 @@
 <template>
   <div id="obrub" class="about">
-    <div id="naslov"><h1>LOGIN</h1></div>
+    <div id="naslov"><h1 id="naslov_login">LOGIN</h1></div>
 
     <div class="row">
       <div class="col"></div>
       <div class="col">
         <form>
           <div class="form-group">
-            <label id="email" for="exampleInputEmail1">Email:</label
+            <label id="email" for="exampleInputEmail1">EMAIL:</label
             ><br /><br />
             <input
               type="email"
@@ -15,19 +15,19 @@
               class="form-control"
               id="emailunos"
               aria-describedby="emailHelp"
-              placeholder="Enter email"
+              placeholder="Unesite email"
             /><br /><br />
             <small id="emailHelp" class="form-text text-muted"> </small>
           </div>
           <div class="form-group">
-            <label id="lozinka" for="exampleInputPassword1">Password:</label
+            <label id="lozinka" for="exampleInputPassword1">LOZINKA:</label
             ><br /><br />
             <input
               v-model="password"
               type="password"
               class="form-control"
               id="lozinkaunos"
-              placeholder="Password"
+              placeholder="Unesite lozinku"
             /><br /><br /><br />
           </div>
           <button type="button" @click="login()" class="btn btn-primary">
@@ -76,7 +76,7 @@ export default {
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
 }
-h1 {
+#naslov_login {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
@@ -87,7 +87,7 @@ h1 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
-  border-radius: 8px;
+  border-radius: 100px;
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
 }
@@ -106,7 +106,7 @@ h1 {
   color: #f5f4d2;
 }
 #emailunos {
-  border-radius: 3px;
+  border-radius: 100px;
   border: none;
   width: 200px;
   height: 30px;
@@ -115,7 +115,7 @@ h1 {
   display: grid;
 }
 #lozinkaunos {
-  border-radius: 3px;
+  border-radius: 100px;
   border: none;
   width: 200px;
   height: 30px;
@@ -129,7 +129,7 @@ button {
   margin: auto;
   display: block;
   display: grid;
-  border-radius: 3px;
+  border-radius: 100px;
   border: none;
   text-align: auto;
   font-family: sans-serif;
@@ -138,5 +138,9 @@ button {
   color: white;
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 13px;
+}
+button:hover {
+  background-color: #d2cbb6;
+  cursor: pointer;
 }
 </style>

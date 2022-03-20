@@ -5,20 +5,18 @@
       background: 'url(' + require('@/assets/pozadina.png') + ')',
     }"
   >
-    <div id="app">
-      <nav id="nav" class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <ul>
-              <li id="slova1"><a href="/login">LOGIN</a></li>
-
-              <img center src="@/assets/logo_adempta.png" height="42" />
-            </ul>
-          </a>
-        </div>
-      </nav>
-      <router-view />
-    </div>
+    <nav id="nav" class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <ul>
+            <li id="slova1"><a href="/login">LOGIN</a></li>
+            <li id="slova1"><a href="/home">POČETNA</a></li>
+            <img center src="@/assets/logo_adempta.png" height="42" />
+          </ul>
+        </a>
+      </div>
+    </nav>
+    <router-view />
   </div>
 </template>
 
@@ -30,7 +28,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #4ab9ab;
-  border-radius: 8px;
+  border-radius: 100px;
 }
 
 #slova1 {
@@ -45,7 +43,7 @@ li a {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 100px;
   background-color: #f5f4d2;
 }
 
@@ -58,6 +56,8 @@ body {
   margin: 0;
   height: 100%;
   overflow: hidden;
+
+  background-repeat: no-repeat;
 }
 .bg-container {
   width: 100%;
