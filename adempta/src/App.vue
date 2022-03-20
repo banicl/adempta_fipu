@@ -1,19 +1,28 @@
 <template>
-  <div id="app">
-    <nav id="nav" class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <ul>
-            <li id="slova1"><a href="/login">LOGIN</a></li>
+  <div
+    class="bg-container"
+    v-bind:style="{
+      background: 'url(' + require('@/assets/pozadina.png') + ')',
+    }"
+  >
+    <div id="app">
+      <nav id="nav" class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <ul>
+              <li id="slova1"><a href="/login">LOGIN</a></li>
 
-            <img center src="@/assets/logo_adempta.png" height="42" />
-          </ul>
-        </a>
-      </div>
-    </nav>
-    <router-view />
+              <img center src="@/assets/logo_adempta.png" height="42" />
+            </ul>
+          </a>
+        </div>
+      </nav>
+      <router-view />
+    </div>
   </div>
 </template>
+
+
 <style>
 ul {
   list-style-type: none;
@@ -42,6 +51,23 @@ li a {
 
 li a:hover {
   background-color: #d2cbb6;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.bg-container {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-sizing: border-box;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 </style>
 
