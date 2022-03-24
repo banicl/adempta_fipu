@@ -52,11 +52,14 @@ export default {
   methods: {
     login() {
       console.log("login..." + this.username);
+
       firebase
         .auth()
         .signInWithEmailAndPassword(this.username, this.password)
         .then((result) => {
           console.log("Uspješna prijava", result);
+
+          this.$router.replace({ name: "Odabir_rada" });
         })
         .catch(function (e) {
           console.error("Greška", e);

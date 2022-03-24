@@ -11,6 +11,7 @@
           <ul>
             <li id="slova1"><a href="/login">LOGIN</a></li>
             <li id="slova1"><a href="/home">POČETNA</a></li>
+
             <img center src="@/assets/logo_adempta.png" height="42" />
           </ul>
         </a>
@@ -19,6 +20,23 @@
     <router-view />
   </div>
 </template>
+<script>
+import store from "@/store";
+import { firebase } from "@/firebase";
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    console.log(user.email);
+  } else console.log("No user");
+});
+export default {
+  name: "app",
+  data() {
+    return {
+      store,
+    };
+  },
+};
+</script>
 
 
 <style>

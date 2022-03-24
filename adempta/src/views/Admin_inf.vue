@@ -8,17 +8,28 @@
     <br /><br />
 
     <br /><br />
-    <button type="button" class="btn btn-primary">ODJAVA</button>
+    <button type="button" @click="logout()" class="btn btn-primary">
+      ODJAVA
+    </button>
   </div>
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
 //dodaj funkciju za prikaz email->firebase
+import { firebase } from "@/firebase";
+import store from "@/store";
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
+  name: "app",
+  data() {
+    return {
+      store,
+    };
+  },
+
+  metods: {
+    logout() {
+      firebase.auth().signOut();
+    },
   },
 };
 </script>
