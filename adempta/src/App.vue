@@ -9,7 +9,12 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <ul>
-            <li id="slova1"><a href="/login">LOGIN</a></li>
+            <li v-if="!store.currentUser" id="slova1">
+              <a href="/login">LOGIN</a>
+            </li>
+            <li v-if="store.currentUser" id="slova1">
+              <a href="/admin_inf">INFO</a>
+            </li>
             <li id="slova1"><a href="/home">POČETNA</a></li>
 
             <img center src="@/assets/logo_adempta.png" height="42" />
@@ -26,7 +31,11 @@ import { firebase } from "@/firebase";
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     console.log(user.email);
-  } else console.log("No user");
+    store.currentUser = user.email;
+  } else {
+    console.log("No user");
+    store.currentUser = null;
+  }
 });
 export default {
   name: "app",
