@@ -21,9 +21,7 @@
       aria-describedby="odredisteHelp"
       placeholder="Unesite odredište"
     /><br /><br />
-    <button type="button" @click="login()" class="btn btn-primary">
-      TRAŽI
-    </button>
+    <button type="button" class="btn btn-primary">TRAŽI</button>
   </div>
 </template>
 
@@ -81,6 +79,7 @@ export default {
   margin: auto;
   display: block;
   display: grid;
+  text-align: center;
 }
 button {
   width: 100px;

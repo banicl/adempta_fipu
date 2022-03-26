@@ -100,6 +100,7 @@ export default {
   font-weight: bold;
   text-align: center;
   color: #f5f4d2;
+  padding: auto;
 }
 #lozinka {
   text-decoration: none;
@@ -107,6 +108,7 @@ export default {
   font-weight: bold;
   text-align: center;
   color: #f5f4d2;
+  padding: 11px;
 }
 #emailunos {
   border-radius: 100px;
@@ -116,6 +118,7 @@ export default {
   margin: auto;
   display: block;
   display: grid;
+  text-align: center;
 }
 #lozinkaunos {
   border-radius: 100px;
@@ -125,6 +128,7 @@ export default {
   margin: auto;
   display: block;
   display: grid;
+  text-align: center;
 }
 button {
   width: 100px;

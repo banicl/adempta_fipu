@@ -3,28 +3,30 @@
   <div id="obrub" class="admin_inf">
     <div id="inf"><h1 id="naslov">ODABERI</h1></div>
     <br />
-    <a href="/dodaj">
-      ><button id="dodaj" type="button" class="btn btn-primary">
+    <a id="a_link" href="/dodaj">
+      <button id="dodaj" type="button" class="btn btn-primary">
         DODAJ NOVU LINIJU
       </button></a
     >
     <br /><br />
 
-    <router-link class="routerLink" :to="{ path: '@/views/Uredi_liniju.vue' }"
-      ><button id="uredi" type="button" class="btn btn-primary">
+    <a id="a_link" href="/uredi">
+      <button id="uredi" type="button" class="btn btn-primary">
         UREDI POSTOJEĆU LINIJU
-      </button></router-link
+      </button></a
     >
 
     <br /><br />
-    <button id="obrisi" type="button" class="btn btn-primary">
-      OBRIŠI LINIJU
-    </button>
+    <a id="a_link" href="/">
+      <button id="obrisi" type="button" class="btn btn-primary">
+        OBRIŠI LINIJU
+      </button></a
+    >
     <br /><br />
-    <router-link class="routerLink" :to="{ path: '@/views/Prikaz_linija.vue' }">
+    <a id="a_link" href="/prikaz">
       <button id="prikaz" type="button" class="btn btn-primary">
         PRIKAZ SVIH LINIJA
-      </button></router-link
+      </button></a
     >
   </div>
 </template>
@@ -56,23 +58,7 @@
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
 }
-#email,
-#administrator {
-  text-decoration: none;
-  font-family: sans-serif;
-  font-weight: bold;
-  text-align: center;
-  color: #f5f4d2;
-}
-#administrator {
-  position: relative;
-  left: 30px;
-  bottom: 27px;
-}
-#email {
-  position: relative;
-  left: 10px;
-}
+
 #dodaj {
   width: 150px;
   height: 45px;
@@ -154,11 +140,12 @@
   background-color: #d2cbb6;
   cursor: pointer;
 }
-#slika {
-  width: 70px;
-  height: 70px;
-}
-.routerLink {
+
+#a_link:link,
+#a_link:visited,
+#a_link:hover,
+#a_link:active {
   text-decoration: none;
+  color: white;
 }
 </style>
