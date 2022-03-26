@@ -3,9 +3,11 @@
   <div id="obrub" class="admin_inf">
     <div id="inf"><h1 id="naslov">ODABERI</h1></div>
     <br />
-    <button id="dodaj" type="button" class="btn btn-primary">
-      DODAJ NOVU LINIJU
-    </button>
+    <a href="/dodaj">
+      ><button id="dodaj" type="button" class="btn btn-primary">
+        DODAJ NOVU LINIJU
+      </button></a
+    >
     <br /><br />
 
     <router-link class="routerLink" :to="{ path: '@/views/Uredi_liniju.vue' }"

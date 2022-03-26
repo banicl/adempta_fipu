@@ -3,7 +3,8 @@
     <div id="inf"><h1 id="naslov">INFORMACIJE</h1></div>
     <img id="slika" src="@/assets/admin.png" />
     <label id="administrator">ADMINISTRATOR</label><br /><br />
-    <label id="email">EMAIL:</label><br /><br />
+    <label id="email">EMAIL: </label>
+    <br /><br />
 
     <br /><br />
 
