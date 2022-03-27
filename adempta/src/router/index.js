@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/home',
-    name: 'home',
+    name: 'Home',
     component: Home
   },
   {
@@ -81,6 +81,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Obrisi_liniju.vue')
+  },
+  {
+    path: '/home',
+    name: 'Pocetna',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Home.vue')
   }
 ]
 

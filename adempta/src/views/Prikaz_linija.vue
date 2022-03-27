@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div id="slika_">
     <a href="/odabir_rada"><img id="slika_odabir" src="@/assets/home.png" /></a>
     <div id="obrub" class="admin_inf">
       <div id="inf"><h1 id="naslov">PRIKAZ LINIJA</h1></div>
@@ -82,7 +82,7 @@ export default {
   height: 38px;
   width: 38px;
   margin-top: 20px;
-  padding-left: 390px;
+  padding-left: 10px;
 }
 #podaci {
   text-align: center;
@@ -97,6 +97,15 @@ export default {
   padding-top: 20px;
   font-weight: bold;
   color: #4ab9ab;
+}
+#slika_ {
+  width: 500px;
+  height: auto;
+  background-color: clear;
+  margin: auto;
+  margin-top: 5px;
+  padding: 20px;
+  border-radius: 15px;
 }
 @media screen and (max-width: 600px) {
   #obrub {
