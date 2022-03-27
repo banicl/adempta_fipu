@@ -1,8 +1,9 @@
+
 <template>
   <div>
     <a href="/odabir_rada"><img id="slika_odabir" src="@/assets/home.png" /></a>
     <div id="obrub" class="admin_inf">
-      <div id="inf"><h1 id="naslov">UREDI LINIJU</h1></div>
+      <div id="inf"><h1 id="naslov">BRISANJE LINIJA</h1></div>
       <br />
     </div>
   </div>

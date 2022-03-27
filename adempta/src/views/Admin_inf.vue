@@ -1,17 +1,23 @@
 <template>
-  <div id="obrub" class="admin_inf">
-    <div id="inf"><h1 id="naslov">INFORMACIJE</h1></div>
-    <img id="slika" src="@/assets/admin.png" />
-    <label id="administrator">ADMINISTRATOR</label><br /><br />
-    <label id="email">EMAIL: </label>
-    <br /><br />
+  <div>
+    <a href="/odabir_rada"><img id="slika_odabir" src="@/assets/home.png" /></a>
+    <div id="obrub" class="admin_inf">
+      <div id="inf"><h1 id="naslov">INFORMACIJE</h1></div>
+      <img id="slika" src="@/assets/admin.png" />
+      <label id="administrator">ADMINISTRATOR</label><br /><br />
+      <label id="email">EMAIL: </label>
+      <div id="podaci" v-for="card in cards" :key="card.id">
+        {{ card.email }}
+      </div>
+      <br /><br />
 
-    <br /><br />
+      <br /><br />
 
-    <br /><br />
-    <button type="button" @click="logout()" class="btn btn-primary">
-      ODJAVA
-    </button>
+      <br /><br />
+      <button type="button" @click="logout()" class="btn btn-primary">
+        ODJAVA
+      </button>
+    </div>
   </div>
 </template>
 
@@ -19,14 +25,18 @@
 //dodaj funkciju za prikaz email->firebase
 import { firebase } from "@/firebase";
 import store from "@/store";
+import { db } from "@/firebase";
 export default {
   name: "app",
   data() {
     return {
+      cards: [],
       store,
     };
   },
-
+  mounted() {
+    this.getLinije();
+  },
   methods: {
     logout() {
       firebase
@@ -36,16 +46,32 @@ export default {
           this.$router.push({ name: "Login" });
         });
     },
+    getLinije() {
+      console.log("firebase dohvat...");
+      db.collection("posts")
+        .get()
+        .then((query) => {
+          this.cards = [];
+          query.forEach((doc) => {
+            const data = doc.data();
+
+            this.cards.push({
+              id: doc.id,
+              email: data.email,
+            });
+          });
+        });
+    },
   },
 };
 </script>
 <style>
 #obrub {
-  width: auto;
+  width: 500px;
   height: auto;
   background-color: #4ab9ab;
   margin: auto;
-  margin-top: 100px;
+
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
@@ -105,5 +131,30 @@ button:hover {
 #slika {
   width: 70px;
   height: 70px;
+}
+#slika_odabir {
+  height: 38px;
+  width: 38px;
+  margin-top: 100px;
+  padding-left: 390px;
+}
+@media screen and (max-width: 600px) {
+  #obrub {
+    width: auto;
+    height: auto;
+    background-color: #4ab9ab;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px #e0e4e4;
+    margin: 10px;
+    margin-top: 5px;
+  }
+
+  #slika_odabir {
+    height: 38px;
+    width: 38px;
+    margin-top: 15px;
+    padding-left: 10px;
+  }
 }
 </style>

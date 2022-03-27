@@ -17,7 +17,7 @@
     >
 
     <br /><br />
-    <a id="a_link" href="/">
+    <a id="a_link" href="/obrisi">
       <button id="obrisi" type="button" class="btn btn-primary">
         OBRIŠI LINIJU
       </button></a
@@ -34,7 +34,7 @@
 
 <style>
 #obrub {
-  width: auto;
+  width: 500px;
   height: auto;
   background-color: #4ab9ab;
   margin: auto;
@@ -147,5 +147,17 @@
 #a_link:active {
   text-decoration: none;
   color: white;
+}
+@media screen and (max-width: 600px) {
+  #obrub {
+    width: auto;
+    height: auto;
+    background-color: #4ab9ab;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px #e0e4e4;
+    margin: 10px;
+    margin-top: 50px;
+  }
 }
 </style>

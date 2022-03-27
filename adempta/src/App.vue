@@ -54,10 +54,11 @@ export default {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   overflow: hidden;
   background-color: #4ab9ab;
   border-radius: 100px;
+  padding-left: 10px;
 }
 
 #slova1 {
@@ -85,7 +86,6 @@ body {
   margin: 0;
   height: 100%;
   overflow: hidden;
-
   background-repeat: no-repeat;
 }
 .bg-container {

@@ -15,7 +15,7 @@
 </template>
 <style>
 #obrub {
-  width: auto;
+  width: 500px;
   height: auto;
   background-color: #4ab9ab;
   margin: auto;
@@ -104,5 +104,17 @@
 
 .routerLink {
   text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  #obrub {
+    width: auto;
+    height: auto;
+    background-color: #4ab9ab;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px #e0e4e4;
+    margin: 10px;
+    margin-top: 5px;
+  }
 }
 </style>
