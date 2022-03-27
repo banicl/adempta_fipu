@@ -1,6 +1,10 @@
 <template>
-  <div id="slika_">
-    <a href="/odabir_rada"><img id="slika_odabir" src="@/assets/home.png" /></a>
+  <div>
+    <div id="slika_div">
+      <a href="/odabir_rada"
+        ><img id="slika_odabir" src="@/assets/home.png"
+      /></a>
+    </div>
     <div id="obrub" class="about">
       <div id="naslov"><h1 id="naslov_login">DODAJ LINIJU</h1></div>
       <form @submit.prevent="postNewLinija" class="form-inline mb-5">
@@ -180,7 +184,7 @@ button:hover {
   margin-top: 20px;
   padding-left: 10px;
 }
-#slika_ {
+#slika_div {
   width: 500px;
   height: auto;
   background-color: clear;
@@ -205,7 +209,16 @@ button:hover {
     height: 38px;
     width: 38px;
     margin-top: 15px;
-    padding-left: 10px;
+    padding-left: 1px;
+  }
+  #slika_div {
+    width: auto;
+    height: 50px;
+    background-color: clear;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0;
+    margin-top: 5px;
   }
 }
 </style>
