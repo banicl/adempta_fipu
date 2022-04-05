@@ -9,7 +9,7 @@
     <div id="obrub" class="admin_inf">
       <div id="inf"><h1 id="naslov">PRIKAZ LINIJA</h1></div>
       <br />
-      <a href="/verudela_centar"
+      <a id="a_link" href="/verudela_centar"
         ><div id="podaci" v-for="card in cards" :key="card.id">
           {{ card.id }} {{ card.polaziste }} {{ card.odrediste }}
           <br />
@@ -109,6 +109,13 @@ export default {
   margin-top: 5px;
   padding: 20px;
   border-radius: 15px;
+}
+#a_link:link,
+#a_link:visited,
+#a_link:hover,
+#a_link:active {
+  text-decoration: none;
+  color: white;
 }
 @media screen and (max-width: 600px) {
   #obrub {

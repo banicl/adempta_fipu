@@ -7,11 +7,13 @@
       /></a>
     </div>
     <div id="obrub" class="admin_inf">
-      <div id="inf podaci" v-for="card in cards" :key="card.id">
-        {{ card.id }}
+      <div id="inf">
+        <div id="naslov" v-for="card in cards" :key="card.id">
+          <h1>{{ card.id }}</h1>
+        </div>
       </div>
       <br />
-      <div id="podaci" v-for="card in cards" :key="card.id">
+      <div id="podaci" v-for="card in cards" :key="card.vrijeme">
         {{ card.vrijeme }}
         <br />
       </div>
@@ -47,7 +49,7 @@ export default {
 
             this.cards.push({
               id: doc.id,
-              vrijeme: data.vrijeme,
+              vrijeme: data.vrijeme[0],
             });
           });
         });
@@ -74,6 +76,7 @@ export default {
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
+  text-transform: uppercase;
 }
 #inf {
   width: auto;
