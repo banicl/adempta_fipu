@@ -75,6 +75,7 @@ li a {
   font-weight: bold;
   border-radius: 100px;
   background-color: #f5f4d2;
+  margin: 2px;
 }
 
 li a:hover {

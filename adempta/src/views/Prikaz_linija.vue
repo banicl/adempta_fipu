@@ -9,9 +9,9 @@
     <div id="obrub" class="admin_inf">
       <div id="inf"><h1 id="naslov">PRIKAZ LINIJA</h1></div>
       <br />
-      <a id="a_link" href="/verudela_centar"
-        ><div id="podaci" v-for="card in cards" :key="card.id">
-          {{ card.id }} {{ card.polaziste }} {{ card.odrediste }}
+      <a id="a_link" href="/buskol_stoja">
+        <div id="podaci" v-for="card in cards" :key="card.id">
+          {{ card.id }}
           <br />
         </div>
       </a>
@@ -100,6 +100,7 @@ export default {
   padding-top: 20px;
   font-weight: bold;
   color: #4ab9ab;
+  margin-bottom: 10px;
 }
 #slika_div {
   width: 500px;

@@ -9,15 +9,14 @@
     <div id="obrub" class="admin_inf">
       <div id="inf"><h1 id="naslov">BRISANJE LINIJA</h1></div>
       <br />
-
       <div id="podaci" v-for="card in cards" :key="card.id">
-        {{ card.polaziste }} {{ card.odrediste }}
-        <img id="kantica" src="@/assets/kantica.png" />
+        {{ card.id }}&nbsp;&nbsp;<img id="kantica" src="@/assets/kantica.png" />
         <br />
       </div>
     </div>
   </div>
 </template>
+
 <script>
 import store from "@/store";
 import { db } from "@/firebase";
@@ -45,9 +44,6 @@ export default {
 
             this.cards.push({
               id: doc.id,
-              polaziste: data.pol,
-              odrediste: data.odr,
-              vrrijeme_polaska: data.vr,
             });
           });
         });
@@ -89,15 +85,6 @@ export default {
   margin-top: 20px;
   padding-left: 10px;
 }
-#slika_ {
-  width: 500px;
-  height: auto;
-  background-color: clear;
-  margin: auto;
-  margin-top: 5px;
-  padding: 20px;
-  border-radius: 15px;
-}
 #podaci {
   text-align: center;
   text-decoration: none;
@@ -111,11 +98,23 @@ export default {
   padding-top: 20px;
   font-weight: bold;
   color: #4ab9ab;
+  margin-bottom: 10px;
 }
-#kantica {
-  height: 20px;
-  width: auto;
-  padding-left: 30px;
+#slika_div {
+  width: 500px;
+  height: auto;
+  background-color: clear;
+  margin: auto;
+  margin-top: 5px;
+  padding: 20px;
+  border-radius: 15px;
+}
+#a_link:link,
+#a_link:visited,
+#a_link:hover,
+#a_link:active {
+  text-decoration: none;
+  color: white;
 }
 @media screen and (max-width: 600px) {
   #obrub {
@@ -135,15 +134,6 @@ export default {
     margin-top: 15px;
     padding-left: 1px;
   }
-  #slika_div {
-    width: auto;
-    height: 50px;
-    background-color: clear;
-    padding: 20px;
-    border-radius: 15px;
-    margin: 0;
-    margin-top: 5px;
-  }
   #podaci {
     text-align: center;
     text-decoration: none;
@@ -157,6 +147,20 @@ export default {
     padding-top: 20px;
     font-weight: bold;
     color: #4ab9ab;
+  }
+  #slika_div {
+    width: auto;
+    height: 50px;
+    background-color: clear;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  #kantica {
+    width: 100px;
+    height: 50%;
   }
 }
 </style>
