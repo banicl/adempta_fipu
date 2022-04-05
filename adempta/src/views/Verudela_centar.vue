@@ -2,8 +2,9 @@
 <template>
   <div>
     <div id="slika_div">
-      <a href="/odabir_rada"
-        ><img id="slika_odabir" src="@/assets/home.png"
+      <a href="/prikaz"> <img id="slika_nazad" src="@/assets/nazad.png" /></a>
+      <a href="/odabir_rada">
+        <img id="slika_odabir" src="@/assets/home.png"
       /></a>
     </div>
     <div id="obrub" class="admin_inf">
@@ -91,6 +92,12 @@ export default {
   width: 38px;
   margin-top: 20px;
   padding-left: 10px;
+}
+#slika_nazad {
+  height: 38px;
+  width: 38px;
+  margin-top: 20px;
+  padding-right: 10px;
 }
 #podaci {
   text-align: center;
