@@ -9,10 +9,12 @@
     <div id="obrub" class="admin_inf">
       <div id="inf"><h1 id="naslov">PRIKAZ LINIJA</h1></div>
       <br />
-      <div id="podaci" v-for="card in cards" :key="card.id">
-        {{ card.polaziste }} {{ card.odrediste }} {{ card.vrrijeme_polaska }}
-        <br />
-      </div>
+      <a href="/verudela_centar"
+        ><div id="podaci" v-for="card in cards" :key="card.id">
+          {{ card.id }} {{ card.polaziste }} {{ card.odrediste }}
+          <br />
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -44,9 +46,6 @@ export default {
 
             this.cards.push({
               id: doc.id,
-              polaziste: data.pol,
-              odrediste: data.odr,
-              vrrijeme_polaska: data.vr,
             });
           });
         });
