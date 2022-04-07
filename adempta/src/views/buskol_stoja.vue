@@ -14,12 +14,16 @@
         </div>
       </div>
       <br />
-      <div id="podaci" v-for="card in cards" :key="card.vrijeme">
-        <p v-if="card.id == 'Bus kolodvor - Stoja'">
-          {{ card.vrijeme }}
-        </p>
-        <br />
-      </div>
+      <ul>
+        <div v-for="(card, counter) in cards" :key="card.id">
+          <li id="podaci" v-for="card in cards" :key="card.id">
+            <div v-if="card.id == 'Bus kolodvor - Stoja'">
+              {{ card.vrijeme[counter] }}
+            </div>
+            <div v-if="card.id == 'Verudela - Centar'"></div>
+          </li>
+        </div>
+      </ul>
     </div>
   </div>
 </template>

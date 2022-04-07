@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <div id="slika_">
+    <div id="slika_div">
       <a href="/odabir_rada"
         ><img id="slika_odabir" src="@/assets/home.png"
       /></a>
