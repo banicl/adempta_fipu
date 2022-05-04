@@ -9,12 +9,23 @@
     <div id="obrub" class="admin_inf">
       <div id="inf"><h1 id="naslov">PRIKAZ LINIJA</h1></div>
       <br />
-      <a id="a_link" href="/buskol_stoja">
-        <div id="podaci" v-for="card in cards" :key="card.id">
-          {{ card.id }}
-          <br />
+      <div v-for="card in cards" :key="card.id">
+        <div id="podaci" v-if="card.id == 'buskol_centar_stoja'">
+          <a id="b_link" href="/buskol_stoja">
+            {{ card.naziv }}
+          </a>
         </div>
-      </a>
+        <div id="podaci" v-if="card.id == 'buskol_veruda_verudela'">
+          <a id="b_link" href="/">
+            {{ card.naziv }}
+          </a>
+        </div>
+        <div id="podaci" v-if="card.id == 'sijana_vidikovac_verudela'">
+          <a id="b_link" href="/">
+            {{ card.naziv }}
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +57,7 @@ export default {
 
             this.cards.push({
               id: doc.id,
+              naziv: data.naziv,
             });
           });
         });
@@ -92,7 +104,7 @@ export default {
   text-decoration: none;
   font-family: sans-serif;
   text-transform: uppercase;
-  width: 300px;
+  width: 350px;
   height: 40px;
   background-color: #f5f4d2;
   border-radius: 100px;
@@ -117,6 +129,14 @@ export default {
 #a_link:active {
   text-decoration: none;
   color: white;
+}
+#b_link:link,
+#b_link:visited,
+#b_link:hover,
+#b_link:active {
+  text-decoration: none;
+  color: #4ab9ab;
+  text-shadow: black 5px;
 }
 @media screen and (max-width: 600px) {
   #obrub {

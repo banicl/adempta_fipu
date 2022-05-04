@@ -9,20 +9,17 @@
     </div>
     <div id="obrub" class="admin_inf">
       <div id="inf">
-        <div id="naslov" v-for="card in cards" :key="card.id">
-          <h1 v-if="card.id == 'Bus kolodvor - Stoja'">{{ card.id }}</h1>
+        <div id="naslov">
+          <h1>CENTAR - STOJA</h1>
         </div>
       </div>
       <br />
       <ul>
-        <div v-for="(card, counter) in cards" :key="card.id">
-          <li id="podaci" v-for="card in cards" :key="card.id">
-            <div v-if="card.id == 'Bus kolodvor - Stoja'">
-              {{ card.vrijeme[counter] }}
-            </div>
-            <div v-if="card.id == 'Verudela - Centar'"></div>
-          </li>
-        </div>
+        <li v-for="card in cards" :key="card.id">
+          <div id="podaci" v-if="card.id == 'buskol_centar_stoja'">
+            {{ card.vrijeme }}
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -42,24 +39,31 @@ export default {
   },
   mounted() {
     this.getLinije();
+    this.formatiranje();
   },
   methods: {
     getLinije() {
       console.log("firebase dohvat...");
-
       db.collection("posts")
         .get()
         .then((query) => {
-          this.cards = [];
+          let arr = [];
           query.forEach((doc) => {
             const data = doc.data();
-
-            this.cards.push({
+            arr.push({
               id: doc.id,
               vrijeme: data.vrijeme,
             });
           });
+          this.cards = arr;
         });
+    },
+    formatiranje() {
+      var format = [];
+      for (i = 0; i < this.arr.length; i++) {
+        format[i] = { i };
+      }
+      return format;
     },
   },
 };
