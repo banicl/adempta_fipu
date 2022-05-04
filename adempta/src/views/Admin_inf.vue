@@ -11,7 +11,7 @@
       <label id="administrator">ADMINISTRATOR</label><br /><br />
       <label id="email">EMAIL: </label>
       <div id="podaci" v-for="card in cards" :key="card.id">
-        {{ card.email }}
+        {{ this.username }}
       </div>
       <br /><br />
 
@@ -36,10 +36,12 @@ export default {
     return {
       cards: [],
       store,
+      username: "",
     };
   },
   mounted() {
     this.getLinije();
+    this.saveEmail();
   },
   methods: {
     logout() {
@@ -65,6 +67,11 @@ export default {
             });
           });
         });
+    },
+    saveEmail() {
+      firebase.auth().onAuthStateChanged((user) => {
+        this.$root.username = user.username;
+      });
     },
   },
 };

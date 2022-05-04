@@ -17,7 +17,10 @@
       <ul>
         <li v-for="card in cards" :key="card.id">
           <div id="podaci" v-if="card.id == 'buskol_centar_stoja'">
-            {{ card.vrijeme }}
+            <div v-for="vrijeme in card.vrijeme" :key="vrijeme.id">
+              {{ vrijeme }}
+              <hr />
+            </div>
           </div>
         </li>
       </ul>
@@ -34,6 +37,7 @@ export default {
   data: function () {
     return {
       cards: [],
+      arr: [],
       store,
     };
   },
@@ -57,13 +61,6 @@ export default {
           });
           this.cards = arr;
         });
-    },
-    formatiranje() {
-      var format = [];
-      for (i = 0; i < this.arr.length; i++) {
-        format[i] = { i };
-      }
-      return format;
     },
   },
 };
@@ -114,8 +111,8 @@ export default {
   text-decoration: none;
   font-family: sans-serif;
   text-transform: uppercase;
-  width: 300px;
-  height: 40px;
+  width: 150px;
+  height: auto;
   background-color: #f5f4d2;
   border-radius: 100px;
   margin: auto;
