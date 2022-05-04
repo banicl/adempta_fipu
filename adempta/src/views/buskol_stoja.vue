@@ -160,6 +160,7 @@ export default {
     padding-top: 20px;
     font-weight: bold;
     color: #4ab9ab;
+    margin-bottom: 10px;
   }
   #slika_div {
     width: auto;

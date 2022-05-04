@@ -9,8 +9,9 @@
     <div id="obrub" class="admin_inf">
       <div id="inf"><h1 id="naslov">BRISANJE LINIJA</h1></div>
       <br />
+
       <div id="podaci" v-for="card in cards" :key="card.id">
-        {{ card.id }}&nbsp;&nbsp;<img id="kantica" src="@/assets/kantica.png" />
+        {{ card.id }}
         <br />
       </div>
     </div>
@@ -91,10 +92,10 @@ export default {
   font-family: sans-serif;
   text-transform: uppercase;
   width: 300px;
+  margin: auto;
   height: 40px;
   background-color: #f5f4d2;
   border-radius: 100px;
-  margin: auto;
   padding-top: 20px;
   font-weight: bold;
   color: #4ab9ab;
@@ -116,6 +117,7 @@ export default {
   text-decoration: none;
   color: white;
 }
+
 @media screen and (max-width: 600px) {
   #obrub {
     width: auto;
@@ -139,14 +141,15 @@ export default {
     text-decoration: none;
     font-family: sans-serif;
     text-transform: uppercase;
-    width: 200px;
+    width: auto;
     height: 40px;
     background-color: #f5f4d2;
-    border-radius: 100px;
+    border-radius: auto;
     margin: auto;
     padding-top: 20px;
     font-weight: bold;
     color: #4ab9ab;
+    margin-bottom: 10px;
   }
   #slika_div {
     width: auto;
