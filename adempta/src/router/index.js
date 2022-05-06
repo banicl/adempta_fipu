@@ -83,8 +83,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Obrisi_liniju.vue')
   },
   {
-    path: '/home',
-    name: 'Pocetna',
+    path: '/odabir_linija',
+    name: 'OdabirLinija',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -97,6 +97,22 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/buskol_stoja.vue')
+  },
+  {
+    path: '/odabir_grada',
+    name: 'OdabirGrada',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Odabir_grada.vue')
+  },
+  {
+    path: '/pogreska',
+    name: 'Pogreska',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Pogreska.vue')
   }
 ]
 

@@ -7,11 +7,14 @@
       /></a>
     </div>
     <div id="obrub" class="admin_inf">
-      <div id="inf"><h1 id="naslov">BRISANJE LINIJA</h1></div>
+      <div id="inf">
+        <h1 id="naslov">BRISANJE LINIJA</h1>
+      </div>
+
       <br />
 
       <div id="podaci" v-for="card in cards" :key="card.id">
-        {{ card.id }}
+        {{ card.id }} <img id="kanta" src="@/assets/kanta.png" />
         <br />
       </div>
     </div>
@@ -100,6 +103,9 @@ export default {
   font-weight: bold;
   color: #4ab9ab;
   margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+#kanta {
 }
 #slika_div {
   width: 500px;

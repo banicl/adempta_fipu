@@ -1,27 +1,31 @@
 <template>
-  <div id="obrub" class="home">
-    <div id="odabir_grada"><h1 id="naslov_grad">PULA-PROMET</h1></div>
-    <label id="polaziste">ODREDITE POLAZIŠTE:</label><br /><br />
+  <div>
+    <div><img src="@/assets/nazad.png" /></div>
 
-    <input
-      type="name1"
-      v-model="username"
-      class="form-control"
-      id="input_polaziste"
-      aria-describedby="polazisteHelp"
-      placeholder="Unesite polazište"
-    /><br /><br />
-    <label id="odrediste" for="exampleInputEmail1">ODREDITE ODREDIŠTE:</label
-    ><br /><br />
-    <input
-      type="name2"
-      v-model="username"
-      class="form-control"
-      id="input_odrediste"
-      aria-describedby="odredisteHelp"
-      placeholder="Unesite odredište"
-    /><br /><br />
-    <button type="button" class="btn btn-primary">TRAŽI</button>
+    <div id="obrub" class="home">
+      <div id="odabir_grada"><h1 id="naslov_grad">PULA-PROMET</h1></div>
+      <label id="polaziste">ODREDITE POLAZIŠTE:</label><br /><br />
+
+      <input
+        type="name1"
+        v-model="username"
+        class="form-control"
+        id="input_polaziste"
+        aria-describedby="polazisteHelp"
+        placeholder="Unesite polazište"
+      /><br /><br />
+      <label id="odrediste" for="exampleInputEmail1">ODREDITE ODREDIŠTE:</label
+      ><br /><br />
+      <input
+        type="name2"
+        v-model="username"
+        class="form-control"
+        id="input_odrediste"
+        aria-describedby="odredisteHelp"
+        placeholder="Unesite odredište"
+      /><br /><br />
+      <button type="button" class="btn btn-primary">TRAŽI</button>
+    </div>
   </div>
 </template>
 

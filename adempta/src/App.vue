@@ -16,7 +16,7 @@
               <a href="/admin_inf">INFO</a>
             </li>
             <li v-if="!store.currentUser" id="slova1">
-              <a href="/home">POČETNA</a>
+              <a href="/odabir_grada">GRAD</a>
             </li>
 
             <img center src="@/assets/logo_adempta.png" height="42" />
