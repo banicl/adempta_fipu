@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div><img src="@/assets/nazad.png" /></div>
+    <div id="slika_div">
+      <a href="/odabir_grada"><img id="nazad" src="@/assets/nazad.png" /></a>
+    </div>
 
     <div id="obrub" class="home">
       <div id="odabir_grada"><h1 id="naslov_grad">PULA-PROMET</h1></div>
@@ -46,10 +48,25 @@ export default {
   height: auto;
   background-color: #4ab9ab;
   margin: auto;
-  margin-top: 100px;
+  margin-top: px;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
+}
+#slika_div {
+  width: 500px;
+  height: auto;
+  background-color: clear;
+  margin: auto;
+  margin-top: 5px;
+  padding: 20px;
+  border-radius: 15px;
+}
+#nazad {
+  height: 38px;
+  width: 38px;
+  margin-top: 20px;
+  padding-right: 10px;
 }
 #naslov_grad {
   text-decoration: none;
@@ -114,7 +131,22 @@ button:hover {
     border-radius: 15px;
     box-shadow: 5px 5px #e0e4e4;
     margin: 10px;
-    margin-top: 50px;
+    margin-top: 0px;
+  }
+  #slika_div {
+    width: auto;
+    height: 50px;
+    background-color: clear;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0;
+    margin-top: 5px;
+  }
+  #nazad {
+    height: 38px;
+    width: 38px;
+    margin-top: 15px;
+    padding-left: 1px;
   }
 }
 </style>

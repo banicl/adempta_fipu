@@ -105,8 +105,7 @@ export default {
   margin-bottom: 10px;
   padding-bottom: 20px;
 }
-#kanta {
-}
+
 #slika_div {
   width: 500px;
   height: auto;
