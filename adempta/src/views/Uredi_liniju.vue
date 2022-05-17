@@ -88,7 +88,7 @@ export default {
     };
   },
   mounted() {
-    this.getLinije();
+    getLinije();
   },
   methods: {
     debug() {

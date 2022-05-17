@@ -36,33 +36,33 @@
   display: none;
 }
 #os {
-  width: 250px;
-  padding-left: 150px;
+  width: 23%;
+  padding: 5%;
   padding-top: 50px;
 }
 #zg {
-  width: 250px;
-  padding-left: 250px;
+  width: 23%;
+  padding: 5%;
   padding-top: 50px;
 }
 #pu {
-  width: 250px;
-  padding-left: 250px;
+  width: 23%;
+  padding: 5%;
   padding-top: 50px;
 }
 #ri {
-  width: 250px;
-  padding-left: 150px;
+  width: 23%;
+  padding: 5%;
   padding-top: 50px;
 }
 #vz {
-  width: 250px;
-  padding-left: 250px;
+  width: 23%;
+  padding: 5%;
   padding-top: 50px;
 }
 #st {
-  width: 250px;
-  padding-left: 250px;
+  width: 23%;
+  padding: 5%;
   padding-top: 50px;
 }
 @media screen and (max-width: 600px) {

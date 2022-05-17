@@ -100,6 +100,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/LinijaDetalji.vue')
   },
+  {
+    path: '/:idlinije_korisnik',
+    name: 'LinijaDetalji_korisnik',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/LinijaDetalji_korisnik.vue')
+  },
 ]
 
 const router = new VueRouter({

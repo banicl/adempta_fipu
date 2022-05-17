@@ -1,10 +1,14 @@
 <template>
   <div>
     <div id="obrub">
-      <div id="inf"><h1 id="naslov">UPS!</h1></div>
+      <div id="inf"><h1 id="naslov">UPS! :(</h1></div>
 
       <br />
-      <h4>Ispričavamo se! Usluge Adempte još nisu dostupne u ovom gradu.</h4>
+      <h3>
+        Ispričavamo se, usluge Adempte<br />
+        još nisu dostupne u ovom gradu.
+      </h3>
+      <br />
       <a id="povratak" href="/">
         <button type="button" class="btn btn-primary" id="gumb">
           POVRATAK
@@ -79,5 +83,9 @@ h4 {
 }
 a {
   text-decoration: none;
+}
+h3 {
+  text-align: center;
+  font-family: sans-serif;
 }
 </style>
