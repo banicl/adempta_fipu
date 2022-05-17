@@ -6,14 +6,22 @@
         ><img id="slika_odabir" src="@/assets/home.png"
       /></a>
     </div>
-    <div id="obrub" class="admin_inf">
+    <div id="obrub">
       <div id="inf"><h1 id="naslov">PRIKAZ LINIJA</h1></div>
       <br />
       <div v-for="card in cards" :key="card.id">
+        <div id="podaci">
+          <router-link
+            :to="{ name: 'LinijaDetalji', params: { idlinije: card.id } }"
+            >{{ card.naziv }}</router-link
+          >
+        </div>
+      </div>
+      <!-- <div v-for="card in cards" :key="card.id">
         <div id="podaci" v-if="card.id == 'buskol_centar_stoja'">
-          <a id="b_link" href="/buskol_stoja">
+          <router-link id="b_link" to="/buskol_stoja">
             {{ card.naziv }}
-          </a>
+          </router-link>
         </div>
         <div id="podaci" v-if="card.id == 'buskol_veruda_verudela'">
           <a id="b_link" href="/">
@@ -25,8 +33,9 @@
             {{ card.naziv }}
           </a>
         </div>
-      </div>
+      </div> ---->
     </div>
+    <button @click="debug">DEBUG</button>
   </div>
 </template>
 
@@ -46,6 +55,9 @@ export default {
     this.getLinije();
   },
   methods: {
+    debug() {
+      console.log(this.cards);
+    },
     getLinije() {
       console.log("firebase dohvat...");
       db.collection("posts")

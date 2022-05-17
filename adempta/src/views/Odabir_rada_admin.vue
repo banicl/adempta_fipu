@@ -3,12 +3,6 @@
   <div id="obrub" class="admin_inf">
     <div id="inf"><h1 id="naslov">ODABERI</h1></div>
     <br />
-    <a id="a_link" href="/dodaj">
-      <button id="dodaj" type="button" class="btn btn-primary">
-        DODAJ NOVU LINIJU
-      </button></a
-    >
-    <br /><br />
 
     <a id="a_link" href="/uredi">
       <button id="uredi" type="button" class="btn btn-primary">

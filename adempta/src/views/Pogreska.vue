@@ -9,6 +9,12 @@
     >
   </div>
 </template>
+<script>
+export default {
+  name: "Pogreska",
+};
+</script>
+
 <style >
 #obrub {
   width: 500px;

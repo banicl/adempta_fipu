@@ -30,7 +30,12 @@
               placeholder="Unesite lozinku"
             /><br /><br /><br />
           </div>
-          <button type="button" @click="login()" class="btn btn-primary">
+          <button
+            id="prijava"
+            type="button"
+            @click="login()"
+            class="btn btn-primary"
+          >
             LOGIN
           </button>
         </form>
@@ -130,7 +135,7 @@ export default {
   display: grid;
   text-align: center;
 }
-button {
+#prijava {
   width: 100px;
   height: 40px;
   margin: auto;
@@ -146,7 +151,7 @@ button {
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 13px;
 }
-button:hover {
+#prijava:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }

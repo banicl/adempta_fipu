@@ -10,11 +10,11 @@
       <div id="inf">
         <h1 id="naslov">BRISANJE LINIJA</h1>
       </div>
-
       <br />
-
       <div id="podaci" v-for="card in cards" :key="card.id">
-        {{ card.id }} <img id="kanta" src="@/assets/kanta.png" />
+        <button @click="obrisiLiniju(card.id)" v-on:click="isHidden = true">
+          {{ card.naziv }}</button
+        ><img id="kanta" src="@/assets/kanta.png" />
         <br />
       </div>
     </div>
@@ -47,9 +47,22 @@ export default {
             const data = doc.data();
 
             this.cards.push({
+              naziv: data.naziv,
               id: doc.id,
             });
           });
+        });
+    },
+    obrisiLiniju(id) {
+      db.collection("posts")
+        .doc(id)
+        .delete()
+        .then(() => {
+          console.log("Uspješno brisanje!");
+          this.cards = this.cards.filter((card) => card.id !== id);
+        })
+        .catch((error) => {
+          console.error("Greška prilikom brisanja: ", error);
         });
     },
   },

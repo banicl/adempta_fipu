@@ -26,7 +26,7 @@
         aria-describedby="odredisteHelp"
         placeholder="Unesite odredište"
       /><br /><br />
-      <button type="button" class="btn btn-primary">TRAŽI</button>
+      <button id="trazi" type="button" class="btn btn-primary">TRAŽI</button>
     </div>
   </div>
 </template>
@@ -102,7 +102,7 @@ export default {
   display: grid;
   text-align: center;
 }
-button {
+#trazi {
   width: 100px;
   height: 40px;
   margin: auto;
@@ -118,7 +118,7 @@ button {
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 13px;
 }
-button:hover {
+#trazi:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }

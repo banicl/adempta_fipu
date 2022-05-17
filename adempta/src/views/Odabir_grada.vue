@@ -2,12 +2,14 @@
   <div>
     <div class="laptop">
       <div>
-        <a href="/pogreska"><img id="os" src="@/assets/osijek.png" /></a>
+        <router-link to="/pogreska"
+          ><img id="os" src="@/assets/osijek.png"
+        /></router-link>
         <a href="/pogreska"><img id="zg" src="@/assets/zagreb.png" /></a>
         <a href="/home"><img id="pu" src="@/assets/pula.png" /></a>
       </div>
       <div>
-        <a href="pogreska"><img id="ri" src="@/assets/rijeka.png" /></a>
+        <a href="/pogreska"><img id="ri" src="@/assets/rijeka.png" /></a>
         <a href="/pogreska"><img id="vz" src="@/assets/varazdin.png" /></a>
         <a href="/pogreska"><img id="st" src="@/assets/split.png" /></a>
       </div>

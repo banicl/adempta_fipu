@@ -9,16 +9,19 @@
       <div id="inf"><h1 id="naslov">INFORMACIJE</h1></div>
       <img id="slika" src="@/assets/admin.png" />
       <label id="administrator">ADMINISTRATOR</label><br /><br />
-      <label id="email">EMAIL: </label>
-      <div id="podaci" v-for="card in cards" :key="card.id">
-        {{ this.username }}
-      </div>
-      <br /><br />
+      <label id="email">EMAIL: {{ username }}</label>
 
       <br /><br />
 
       <br /><br />
-      <button type="button" @click="logout()" class="btn btn-primary">
+
+      <br /><br />
+      <button
+        id="odjava"
+        type="button"
+        @click="logout()"
+        class="btn btn-primary"
+      >
         ODJAVA
       </button>
     </div>
@@ -40,7 +43,6 @@ export default {
     };
   },
   mounted() {
-    this.getLinije();
     this.saveEmail();
   },
   methods: {
@@ -52,25 +54,12 @@ export default {
           this.$router.push({ name: "Login" });
         });
     },
-    getLinije() {
-      console.log("firebase dohvat...");
-      db.collection("posts")
-        .get()
-        .then((query) => {
-          this.cards = [];
-          query.forEach((doc) => {
-            const data = doc.data();
-
-            this.cards.push({
-              id: doc.id,
-              email: data.email,
-            });
-          });
-        });
-    },
     saveEmail() {
       firebase.auth().onAuthStateChanged((user) => {
-        this.$root.username = user.username;
+        console.log("😉");
+        console.log(user.email);
+        this.username = user.email;
+        console.log(this.username);
       });
     },
   },
@@ -119,7 +108,7 @@ export default {
   position: relative;
   left: 10px;
 }
-button {
+#odjava {
   width: 100px;
   height: 40px;
   margin: auto;
@@ -135,7 +124,7 @@ button {
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 13px;
 }
-button:hover {
+#odjava:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }

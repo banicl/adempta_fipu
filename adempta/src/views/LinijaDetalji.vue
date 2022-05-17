@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div v-if="card">
     <div id="slika_div">
       <a href="/prikaz"> <img id="slika_nazad" src="@/assets/nazad.png" /></a>
       <a href="/odabir_rada">
@@ -10,21 +10,19 @@
     <div id="obrub" class="admin_inf">
       <div id="inf">
         <div id="naslov">
-          <h1>CENTAR - STOJA</h1>
+          <h1>{{ card.naziv }}</h1>
         </div>
       </div>
       <br />
       <ul>
-        <li v-for="card in cards" :key="card.id">
-          <div id="podaci" v-if="card.id == 'buskol_centar_stoja'">
-            <div v-for="vrijeme in card.vrijeme" :key="vrijeme.id">
-              {{ vrijeme }}
-              <hr />
-            </div>
+        <div id="podaci">
+          <div v-for="vrijeme in card.vrijeme" :key="vrijeme.id">
+            {{ vrijeme }}
           </div>
-        </li>
+        </div>
       </ul>
     </div>
+    <button @click="debug">Press me</button>
   </div>
 </template>
 
@@ -33,34 +31,40 @@ import store from "@/store";
 import { db } from "@/firebase";
 
 export default {
-  name: "prikazi_linije",
+  name: "LinijaDetalji",
   data: function () {
     return {
-      cards: [],
+      card: null,
       arr: [],
+      cardID: this.$route.params.idlinije,
       store,
     };
   },
   mounted() {
     this.getLinije();
-    this.formatiranje();
   },
   methods: {
+    debug() {
+      console.log(this.card);
+    },
     getLinije() {
+      const docRef = db.collection("posts").doc(this.cardID);
+
+      docRef.get().then((doc) => {
+        if (doc.exists) {
+          console.log("ima dokumenta😁");
+          const data = doc.data();
+          this.card = {
+            id: doc.id,
+            vrijeme: data.vrijeme,
+            naziv: data.naziv,
+          };
+        } else {
+          console.log("nema dokumenta 😥");
+        }
+      });
+
       console.log("firebase dohvat...");
-      db.collection("posts")
-        .get()
-        .then((query) => {
-          let arr = [];
-          query.forEach((doc) => {
-            const data = doc.data();
-            arr.push({
-              id: doc.id,
-              vrijeme: data.vrijeme,
-            });
-          });
-          this.cards = arr;
-        });
     },
   },
 };
@@ -107,8 +111,24 @@ export default {
   padding-right: 10px;
 }
 #podaci {
-  text-align: center;
   text-decoration: none;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  width: 150px;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f4d2;
+  border-radius: 100px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: #4ab9ab;
+  /* text-decoration: none;
   font-family: sans-serif;
   text-transform: uppercase;
   width: 150px;
@@ -118,7 +138,7 @@ export default {
   margin: auto;
   padding-top: 20px;
   font-weight: bold;
-  color: #4ab9ab;
+  color: #4ab9ab; */
 }
 #slika_div {
   width: 500px;

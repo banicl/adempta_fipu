@@ -44,7 +44,9 @@
           /><br />
         </div>
         <br />
-        <button type="submit" class="btn btn-primary ml-2">DODAJ LINIJU</button>
+        <button id="podnesi" type="submit" class="btn btn-primary ml-2">
+          DODAJ LINIJU
+        </button>
       </form>
     </div>
   </div>
@@ -101,6 +103,7 @@ export default {
   margin: auto;
   margin-top: 5px;
   padding: 20px;
+  margin-bottom: 50px;
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
 }
@@ -157,7 +160,7 @@ export default {
   display: grid;
   text-align: center;
 }
-button {
+#podnesi {
   width: 100px;
   height: auto;
   margin: auto;
@@ -174,7 +177,7 @@ button {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-button:hover {
+#podnesi:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }

@@ -16,7 +16,7 @@
               <a href="/admin_inf">INFO</a>
             </li>
             <li v-if="!store.currentUser" id="slova1">
-              <a href="/odabir_grada">GRAD</a>
+              <a href="/">GRAD</a>
             </li>
 
             <img center src="@/assets/logo_adempta.png" height="42" />
@@ -86,7 +86,6 @@ html,
 body {
   margin: 0;
   height: 100%;
-  overflow: hidden;
   background-repeat: no-repeat;
 }
 .bg-container {

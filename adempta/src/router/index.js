@@ -6,6 +6,14 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/pogreska',
+    name: 'Pogreska',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Pogreska.vue')
+  },
+  {
     path: '/home',
     name: 'Home',
     component: Home
@@ -42,14 +50,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Odabir_rada_admin.vue')
   },
-  {
-    path: '/dodaj',
-    name: 'Dodaj_liniju',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Dodaj_liniju.vue')
-  },
+
   {
     path: '/uredi',
     name: 'Uredi_liniju',
@@ -84,15 +85,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Home.vue')
   },
   {
-    path: '/buskol_stoja',
-    name: 'buskol_stoja',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/buskol_stoja.vue')
-  },
-  {
-    path: '/odabir_grada',
+    path: '/',
     name: 'OdabirGrada',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -100,13 +93,13 @@ const routes = [
     component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Odabir_grada.vue')
   },
   {
-    path: '/pogreska',
-    name: 'Pogreska',
+    path: '/:idlinije',
+    name: 'LinijaDetalji',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/Pogreska.vue')
-  }
+    component: () => import(/* webpackChunkName: "Odabir_rada_admin" */ '../views/LinijaDetalji.vue')
+  },
 ]
 
 const router = new VueRouter({
