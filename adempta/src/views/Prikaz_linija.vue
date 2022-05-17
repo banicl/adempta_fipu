@@ -12,30 +12,13 @@
       <div v-for="card in cards" :key="card.id">
         <div id="podaci">
           <router-link
+            id="ruter"
             :to="{ name: 'LinijaDetalji', params: { idlinije: card.id } }"
             >{{ card.naziv }}</router-link
           >
         </div>
       </div>
-      <!-- <div v-for="card in cards" :key="card.id">
-        <div id="podaci" v-if="card.id == 'buskol_centar_stoja'">
-          <router-link id="b_link" to="/buskol_stoja">
-            {{ card.naziv }}
-          </router-link>
-        </div>
-        <div id="podaci" v-if="card.id == 'buskol_veruda_verudela'">
-          <a id="b_link" href="/">
-            {{ card.naziv }}
-          </a>
-        </div>
-        <div id="podaci" v-if="card.id == 'sijana_vidikovac_verudela'">
-          <a id="b_link" href="/">
-            {{ card.naziv }}
-          </a>
-        </div>
-      </div> ---->
     </div>
-    <button @click="debug">DEBUG</button>
   </div>
 </template>
 
@@ -89,6 +72,7 @@ export default {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
+  overflow: auto;
 }
 #naslov {
   text-decoration: none;
@@ -135,21 +119,11 @@ export default {
   padding: 20px;
   border-radius: 15px;
 }
-#a_link:link,
-#a_link:visited,
-#a_link:hover,
-#a_link:active {
-  text-decoration: none;
-  color: white;
-}
-#b_link:link,
-#b_link:visited,
-#b_link:hover,
-#b_link:active {
+#ruter {
   text-decoration: none;
   color: #4ab9ab;
-  text-shadow: black 5px;
 }
+
 @media screen and (max-width: 600px) {
   #obrub {
     width: auto;

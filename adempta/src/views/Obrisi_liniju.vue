@@ -10,11 +10,18 @@
       <div id="inf">
         <h1 id="naslov">BRISANJE LINIJA</h1>
       </div>
+      <div id="brisanjediv">
+        <label id="brisanje">Klikni na liniju koju želite obrisati.</label>
+      </div>
       <br />
       <div id="podaci" v-for="card in cards" :key="card.id">
-        <button @click="obrisiLiniju(card.id)" v-on:click="isHidden = true">
-          {{ card.naziv }}</button
-        ><img id="kanta" src="@/assets/kanta.png" />
+        <button
+          id="obrisi"
+          @click="obrisiLiniju(card.id)"
+          v-on:click="isHidden = true"
+        >
+          {{ card.naziv }}
+        </button>
         <br />
       </div>
     </div>
@@ -80,6 +87,7 @@ export default {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
+  overflow: auto;
 }
 #naslov {
   text-decoration: none;
@@ -102,22 +110,6 @@ export default {
   margin-top: 20px;
   padding-left: 10px;
 }
-#podaci {
-  text-align: center;
-  text-decoration: none;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  width: 300px;
-  margin: auto;
-  height: 40px;
-  background-color: #f5f4d2;
-  border-radius: 100px;
-  padding-top: 20px;
-  font-weight: bold;
-  color: #4ab9ab;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-}
 
 #slika_div {
   width: 500px;
@@ -134,6 +126,33 @@ export default {
 #a_link:active {
   text-decoration: none;
   color: white;
+}
+
+#obrisi {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  width: 300px;
+  margin: auto;
+  height: 40px;
+  background-color: #f5f4d2;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  font-weight: bold;
+  color: #4ab9ab;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  display: block;
+  display: grid;
+}
+#brisanje {
+  font-family: sans-serif;
+  color: #f5f4d2;
+  padding-left: 127px;
+}
+#brisanjediv {
+  padding-bottom: 30px;
 }
 
 @media screen and (max-width: 600px) {

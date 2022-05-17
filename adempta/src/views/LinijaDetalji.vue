@@ -22,7 +22,6 @@
         </div>
       </ul>
     </div>
-    <button @click="debug">Press me</button>
   </div>
 </template>
 
@@ -81,6 +80,7 @@ export default {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
+  overflow: auto;
 }
 #naslov {
   text-decoration: none;

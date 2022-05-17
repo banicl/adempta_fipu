@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="slika_div">
-      <a href="/odabir_grada"><img id="nazad" src="@/assets/nazad.png" /></a>
+      <a href="/"><img id="nazad" src="@/assets/nazad.png" /></a>
     </div>
 
     <div id="obrub" class="home">

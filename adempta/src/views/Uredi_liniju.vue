@@ -8,30 +8,17 @@
     <div id="obrub" class="admin_inf">
       <div id="inf"><h1 id="naslov">UREDI LINIJU</h1></div>
       <br />
-      <label for="bus">SELECT</label>
-      <select name="bus" v-if="cards" v-model="newlinija">
+      <label id="vrijeme" for="bus"
+        >Odaberite liniju koju želite urediti:</label
+      >
+      <select id="drop" name="bus" v-if="cards" v-model="newlinija">
         <option v-for="card in cards" :key="card.id" :value="card.id">
           {{ card.naziv }}
         </option>
       </select>
       <br /><br />
       <br />
-      <label id="vrijeme" for="polaziste">Unesite polazište: </label><br />
-      <input
-        v-model="newpolaziste"
-        type="text"
-        class="form-control ml-2"
-        placeholder="Unesite broj vremena"
-        id="brojvrijeme"
-      /><br /><br />
-      <label id="vrijeme" for="odrediste">Unesite odredište: </label><br />
-      <input
-        v-model="newodrediste"
-        type="text"
-        class="form-control ml-2"
-        placeholder="Unesite broj vremena"
-        id="brojvrijeme"
-      /><br /><br />
+
       <label id="vrijeme" for="broj_busa">Unesite broj busa: </label><br />
       <input
         v-model="brbusa"
@@ -74,7 +61,6 @@
         SPREMI
       </button>
     </div>
-    <button @click="debug">DEBUG</button>
   </div>
 </template>
 
@@ -188,7 +174,7 @@ export default {
 <style>
 #obrub {
   width: 500px;
-  height: auto;
+  height: 500px;
   background-color: #4ab9ab;
   margin: auto;
   margin-top: 5px;
@@ -196,6 +182,7 @@ export default {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
+  overflow: auto;
 }
 #naslov {
   text-decoration: none;
@@ -237,7 +224,8 @@ export default {
   border-radius: 15px;
 }
 #vrijemepolaska,
-#brojvrijeme {
+#brojvrijeme,
+#drop {
   border-radius: 100px;
   border: none;
   width: 200px;

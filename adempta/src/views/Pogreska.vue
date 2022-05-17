@@ -1,12 +1,16 @@
 <template>
-  <div id="obrub">
-    <div id="inf"><h1 id="naslov">UPS!</h1></div>
+  <div>
+    <div id="obrub">
+      <div id="inf"><h1 id="naslov">UPS!</h1></div>
 
-    <br />
-    <h4>Ispričavamo se! Usluge Adempte još nisu dostupne u ovom gradu.</h4>
-    <a id="povratak" href="/odabir_grada">
-      <button type="button" class="btn btn-primary">POVRATAK</button></a
-    >
+      <br />
+      <h4>Ispričavamo se! Usluge Adempte još nisu dostupne u ovom gradu.</h4>
+      <a id="povratak" href="/">
+        <button type="button" class="btn btn-primary" id="gumb">
+          POVRATAK
+        </button></a
+      >
+    </div>
   </div>
 </template>
 <script>
@@ -52,5 +56,28 @@ h4 {
 #pogreska:active {
   text-decoration: none;
   color: white;
+}
+#gumb {
+  width: 100px;
+  height: 40px;
+  margin: auto;
+  display: block;
+  display: grid;
+  border-radius: 100px;
+  border: none;
+  text-align: auto;
+  font-family: sans-serif;
+  font-weight: bold;
+  background: #449c91;
+  color: white;
+  box-shadow: 5px 5px #e0e4e4;
+  padding-top: 13px;
+}
+#gumb:hover {
+  background-color: #d2cbb6;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
 }
 </style>
