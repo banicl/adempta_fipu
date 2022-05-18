@@ -1,22 +1,22 @@
 
 <template>
   <div>
-    <div id="slika_div">
+    <div id="slika_div7">
       <a href="/odabir_rada"
-        ><img id="slika_odabir" src="@/assets/home.png"
+        ><img id="slika_odabir7" src="@/assets/home.png"
       /></a>
     </div>
-    <div id="obrub" class="admin_inf">
-      <div id="inf">
-        <h1 id="naslov">BRISANJE LINIJA</h1>
+    <div id="obrub7" class="admin_inf7">
+      <div id="inf7">
+        <h1 id="naslov7">BRISANJE LINIJA</h1>
       </div>
-      <div id="brisanjediv">
-        <label id="brisanje">Klikni na liniju koju želite obrisati.</label>
+      <div id="brisanjediv7">
+        <label id="brisanje7">Klikni na liniju koju želite obrisati.</label>
       </div>
       <br />
       <div v-for="card in cards" :key="card.id">
         <button
-          id="obrisi"
+          id="obrisi1"
           @click="obrisiLiniju(card.id)"
           v-on:click="isHidden = true"
         >
@@ -80,7 +80,7 @@ export default {
 
 
 <style>
-#obrub {
+#obrub7 {
   width: 500px;
   height: 500px;
   background-color: #4ab9ab;
@@ -91,14 +91,14 @@ export default {
   box-shadow: 5px 5px #e0e4e4;
   overflow: auto;
 }
-#naslov {
+#naslov7 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
 }
-#inf {
+#inf7 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
@@ -106,14 +106,14 @@ export default {
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
 }
-#slika_odabir {
+#slika_odabir7 {
   height: 38px;
   width: 38px;
   margin-top: 20px;
   padding-left: 10px;
 }
 
-#slika_div {
+#slika_div7 {
   width: 500px;
   height: auto;
   background-color: clear;
@@ -122,15 +122,8 @@ export default {
   padding: 20px;
   border-radius: 15px;
 }
-#a_link:link,
-#a_link:visited,
-#a_link:hover,
-#a_link:active {
-  text-decoration: none;
-  color: white;
-}
 
-#obrisi {
+#obrisi1 {
   font-family: sans-serif;
   text-transform: uppercase;
   width: 300px;
@@ -148,7 +141,7 @@ export default {
   display: block;
   display: grid;
 }
-#obrisi:hover {
+#obrisi1:hover {
   font-family: sans-serif;
   text-transform: uppercase;
   width: 300px;
@@ -166,17 +159,17 @@ export default {
   display: block;
   display: grid;
 }
-#brisanje {
+#brisanje7 {
   font-family: sans-serif;
   color: #f5f4d2;
   padding-left: 127px;
 }
-#brisanjediv {
+#brisanjediv7 {
   padding-bottom: 30px;
 }
 
 @media screen and (max-width: 600px) {
-  #obrub {
+  #obrub7 {
     width: auto;
     height: auto;
     background-color: #4ab9ab;
@@ -187,28 +180,14 @@ export default {
     margin-top: 0;
   }
 
-  #slika_odabir {
+  #slika_odabir7 {
     height: 38px;
     width: 38px;
     margin-top: 15px;
     padding-left: 1px;
   }
-  #podaci {
-    text-align: center;
-    text-decoration: none;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    width: auto;
-    height: 40px;
-    background-color: #f5f4d2;
-    border-radius: auto;
-    margin: auto;
-    padding-top: 20px;
-    font-weight: bold;
-    color: #4ab9ab;
-    margin-bottom: 10px;
-  }
-  #slika_div {
+
+  #slika_div7 {
     width: auto;
     height: 50px;
     background-color: clear;
@@ -216,11 +195,6 @@ export default {
     border-radius: 15px;
     margin: 0;
     margin-top: 5px;
-  }
-
-  #kantica {
-    width: 100px;
-    height: 50%;
   }
 }
 </style>

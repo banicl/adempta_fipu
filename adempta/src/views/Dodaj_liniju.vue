@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div id="slika_div">
+    <div id="slika_div2">
       <a href="/odabir_rada"
-        ><img id="slika_odabir" src="@/assets/home.png"
+        ><img id="slika_odabir22" src="@/assets/home.png"
       /></a>
     </div>
-    <div id="obrub" class="about">
-      <div id="naslov"><h1 id="naslov_login">DODAJ LINIJU</h1></div>
+    <div id="obrub2" class="about">
+      <div id="naslov2"><h1 id="naslov2_login2">DODAJ LINIJU</h1></div>
       <form @submit.prevent="postNewLinija" class="form-inline mb-5">
         <div class="form-group">
-          <label id="pol_dol_vri" for="polaziste">POLAZIŠTE: </label>
+          <label id="pol_dol_vri2" for="polaziste">POLAZIŠTE: </label>
           <br /><br />
           <input
             v-model="newpolaziste"
@@ -21,7 +21,7 @@
         </div>
         <br />
         <div class="form-group">
-          <label id="pol_dol_vri" for="odrediste">ODREDIŠTE: </label
+          <label id="pol_dol_vri2" for="odrediste">ODREDIŠTE: </label
           ><br /><br />
           <input
             v-model="newodrediste"
@@ -33,18 +33,19 @@
         </div>
         <br />
         <div class="form-group">
-          <label id="pol_dol_vri" for="vrijemepolaska">VRIJEME POLASKA: </label
+          <label id="pol_dol_vri2" for="vrijemepolaska2"
+            >VRIJEME POLASKA: </label
           ><br /><br />
           <input
             v-model="newvrijeme"
             type="text"
             class="form-control ml-2"
             placeholder="Unesite vrijeme polaska"
-            id="vrijemepolaska"
+            id="vrijemepolaska2"
           /><br />
         </div>
         <br />
-        <button id="podnesi" type="submit" class="btn btn-primary ml-2">
+        <button id="podnesi2" type="submit" class="btn btn-primary ml-2">
           DODAJ LINIJU
         </button>
       </form>
@@ -70,13 +71,13 @@ export default {
 
       const polaziste = this.newpolaziste;
       const odrediste = this.newodrediste;
-      const vrijemepolaska = this.newvrijeme;
+      const vrijemepolaska2 = this.newvrijeme;
 
       db.collection("posts")
         .add({
           pol: polaziste,
           odr: odrediste,
-          vr: vrijemepolaska,
+          vr: vrijemepolaska2,
           email: store.currentUser,
           posted_at: Date.now(),
         })
@@ -96,7 +97,7 @@ export default {
 
 
 <style>
-#obrub {
+#obrub2 {
   width: 500px;
   height: auto;
   background-color: #4ab9ab;
@@ -107,14 +108,14 @@ export default {
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
 }
-#naslov_login {
+#naslov_login2 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
 }
-#naslov {
+#naslov2 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
@@ -122,7 +123,7 @@ export default {
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
 }
-#pol_dol_vri {
+#pol_dol_vri2 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
@@ -150,7 +151,7 @@ export default {
   display: grid;
   text-align: center;
 }
-#vrijemepolaska {
+#vrijemepolaska2 {
   border-radius: 100px;
   border: none;
   width: 200px;
@@ -160,7 +161,7 @@ export default {
   display: grid;
   text-align: center;
 }
-#podnesi {
+#podnesi2 {
   width: 100px;
   height: auto;
   margin: auto;
@@ -177,17 +178,17 @@ export default {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-#podnesi:hover {
+#podnesi2:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }
-#slika_odabir {
+#slika_odabir2 {
   height: 38px;
   width: 38px;
   margin-top: 20px;
   padding-left: 10px;
 }
-#slika_div {
+#slika_div2 {
   width: 500px;
   height: auto;
   background-color: clear;
@@ -197,7 +198,7 @@ export default {
   border-radius: 15px;
 }
 @media screen and (max-width: 600px) {
-  #obrub {
+  #obrub2 {
     width: auto;
     height: auto;
     background-color: #4ab9ab;
@@ -208,13 +209,13 @@ export default {
     margin-top: 5px;
   }
 
-  #slika_odabir {
+  #slika_odabir2 {
     height: 38px;
     width: 38px;
     margin-top: 15px;
     padding-left: 1px;
   }
-  #slika_div {
+  #slika_div2 {
     width: auto;
     height: 50px;
     background-color: clear;

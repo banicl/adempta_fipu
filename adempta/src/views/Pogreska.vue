@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div id="obrub">
-      <div id="inf"><h1 id="naslov">UPS! :(</h1></div>
+    <div id="obrub9">
+      <div id="inf9"><h1 id="naslov9">UPS! :(</h1></div>
 
       <br />
       <h3>
@@ -10,7 +10,7 @@
       </h3>
       <br />
       <a id="povratak" href="/">
-        <button type="button" class="btn btn-primary" id="gumb">
+        <button type="button" class="btn btn-primary" id="gumb9">
           POVRATAK
         </button></a
       >
@@ -24,9 +24,9 @@ export default {
 </script>
 
 <style >
-#obrub {
+#obrub9 {
   width: 500px;
-  height: auto;
+  height: 300px;
   background-color: #4ab9ab;
   margin: auto;
   margin-top: 150px;
@@ -34,14 +34,14 @@ export default {
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
 }
-#naslov {
+#naslov9 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
 }
-#inf {
+#inf9 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
@@ -54,14 +54,8 @@ h4 {
   text-decoration: none;
   font-family: sans-serif;
 }
-#pogreska:link,
-#pogreska:visited,
-#pogreska:hover,
-#pogreska:active {
-  text-decoration: none;
-  color: white;
-}
-#gumb {
+
+#gumb9 {
   width: 100px;
   height: 40px;
   margin: auto;
@@ -77,7 +71,7 @@ h4 {
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 13px;
 }
-#gumb:hover {
+#gumb9:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }

@@ -1,17 +1,17 @@
 <template>
   <div>
-    <div id="slika_div">
+    <div id="slika_div11">
       <a href="/odabir_rada"
-        ><img id="slika_odabir" src="@/assets/home.png"
+        ><img id="slika_odabir11" src="@/assets/home.png"
       /></a>
     </div>
-    <div id="obrub" class="admin_inf">
-      <div id="inf"><h1 id="naslov">UREDI LINIJU</h1></div>
+    <div id="obrub11" class="admin_inf11">
+      <div id="inf11"><h1 id="naslov11">UREDI LINIJU</h1></div>
       <br />
-      <label id="vrijeme" for="bus"
+      <label id="vrijeme11" for="bus"
         >Odaberite liniju koju želite urediti:</label
       >
-      <select id="drop" name="bus" v-if="cards" v-model="newlinija">
+      <select id="drop11" name="bus" v-if="cards" v-model="newlinija">
         <option v-for="card in cards" :key="card.id" :value="card.id">
           {{ card.naziv }}
         </option>
@@ -19,9 +19,9 @@
       <br /><br />
       <br />
 
-      <label id="vrijeme" for="vrijemepolaska">VRIJEME POLASKA: </label
+      <label id="vrijeme11" for="vrijemepolaska">VRIJEME POLASKA: </label
       ><br /><br />
-      <label id="vrijeme" for="vrijemepolaska"
+      <label id="vrijeme11" for="vrijemepolaska"
         >Unesite broj novih vremena koje želite unijeti:
       </label>
       <input
@@ -29,7 +29,7 @@
         type="number"
         class="form-control ml-2"
         placeholder="Unesite broj vremena"
-        id="brojvrijeme"
+        id="brojvrijeme11"
       />
       <br /><br />
 
@@ -39,13 +39,13 @@
           type="text"
           class="form-control ml-2"
           placeholder="Unesite vrijeme polaska"
-          id="vrijemepolaska"
+          id="vrijemepolaska11"
         />
         <br />
       </div>
       <br /><br />
       <button
-        id="podnesi"
+        id="podnesi11"
         type="submit"
         @click="UpdateLinija(), postNewLinija()"
         class="btn btn-primary ml-2"
@@ -164,7 +164,7 @@ export default {
 </script>
 
 <style>
-#obrub {
+#obrub11 {
   width: 500px;
   height: 420px;
   background-color: #4ab9ab;
@@ -176,15 +176,15 @@ export default {
   box-shadow: 5px 5px #e0e4e4;
   overflow: auto;
 }
-#naslov {
+#naslov11 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
 }
-#linije,
-#vrijeme {
+
+#vrijeme11 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
@@ -192,7 +192,7 @@ export default {
   color: #fff;
 }
 
-#inf {
+#inf11 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
@@ -200,13 +200,13 @@ export default {
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
 }
-#slika_odabir {
+#slika_odabir11 {
   height: 38px;
   width: 38px;
   margin-top: 20px;
   padding-left: 10px;
 }
-#slika_div {
+#slika_div11 {
   width: 500px;
   height: auto;
   background-color: clear;
@@ -215,9 +215,9 @@ export default {
   padding: 20px;
   border-radius: 15px;
 }
-#vrijemepolaska,
-#brojvrijeme,
-#drop {
+#vrijemepolaska11,
+#brojvrijeme11,
+#drop11 {
   border-radius: 100px;
   border: none;
   width: 200px;
@@ -228,7 +228,7 @@ export default {
   text-align: center;
 }
 
-#podnesi {
+#podnesi11 {
   width: 100px;
   height: 40px;
   margin: auto;
@@ -244,12 +244,12 @@ export default {
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 13px;
 }
-#podnesi:hover {
+#podnesi11:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-  #obrub {
+  #obrub11 {
     width: auto;
     height: auto;
     background-color: #4ab9ab;
@@ -260,13 +260,13 @@ export default {
     margin-top: 0;
   }
 
-  #slika_odabir {
+  #slika_odabir11 {
     height: 38px;
     width: 38px;
     margin-top: 15px;
     padding-left: 1px;
   }
-  #slika_div {
+  #slika_div11 {
     width: auto;
     height: 50px;
     background-color: clear;

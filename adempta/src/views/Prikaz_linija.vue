@@ -1,18 +1,18 @@
 
 <template>
   <div>
-    <div id="slika_div">
+    <div id="slika_div10">
       <a href="/odabir_rada"
-        ><img id="slika_odabir" src="@/assets/home.png"
+        ><img id="slika_odabir10" src="@/assets/home.png"
       /></a>
     </div>
-    <div id="obrub">
-      <div id="inf"><h1 id="naslov">PRIKAZ LINIJA</h1></div>
+    <div id="obrub10">
+      <div id="inf10"><h1 id="naslov10">PRIKAZ LINIJA</h1></div>
       <br />
       <div v-for="card in cards" :key="card.id">
-        <div id="podaci">
+        <div id="podaci10">
           <router-link
-            id="ruter"
+            id="ruter10"
             :to="{ name: 'LinijaDetalji', params: { idlinije: card.id } }"
             >{{ card.naziv }}</router-link
           >
@@ -63,7 +63,7 @@ export default {
 
 
 <style>
-#obrub {
+#obrub10 {
   width: 500px;
   height: 567px;
   background-color: #4ab9ab;
@@ -74,14 +74,14 @@ export default {
   box-shadow: 5px 5px #e0e4e4;
   overflow: auto;
 }
-#naslov {
+#naslov10 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
 }
-#inf {
+#inf10 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
@@ -89,13 +89,13 @@ export default {
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
 }
-#slika_odabir {
+#slika_odabir10 {
   height: 38px;
   width: 38px;
   margin-top: 20px;
   padding-left: 10px;
 }
-#podaci {
+#podaci10 {
   text-align: center;
   text-decoration: none;
   font-family: sans-serif;
@@ -110,7 +110,7 @@ export default {
   color: #4ab9ab;
   margin-bottom: 10px;
 }
-#slika_div {
+#slika_div10 {
   width: 500px;
   height: auto;
   background-color: clear;
@@ -119,13 +119,13 @@ export default {
   padding: 20px;
   border-radius: 15px;
 }
-#ruter {
+#ruter10 {
   text-decoration: none;
   color: #4ab9ab;
 }
 
 @media screen and (max-width: 600px) {
-  #obrub {
+  #obrub10 {
     width: auto;
     height: auto;
     background-color: #4ab9ab;
@@ -136,13 +136,13 @@ export default {
     margin-top: 0;
   }
 
-  #slika_odabir {
+  #slika_odabir10 {
     height: 38px;
     width: 38px;
     margin-top: 15px;
     padding-left: 1px;
   }
-  #podaci {
+  #podaci10 {
     text-align: center;
     text-decoration: none;
     font-family: sans-serif;
@@ -157,7 +157,7 @@ export default {
     color: #4ab9ab;
     margin-bottom: 10px;
   }
-  #slika_div {
+  #slika_div10 {
     width: auto;
     height: 50px;
     background-color: clear;

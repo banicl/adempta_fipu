@@ -1,24 +1,24 @@
 
 <template>
-  <div id="obrub" class="admin_inf">
-    <div id="inf"><h1 id="naslov">ODABERI</h1></div>
+  <div id="obrub8" class="admin_inf">
+    <div id="inf8"><h1 id="naslov8">ODABERI</h1></div>
     <br />
 
     <a id="a_link" href="/uredi">
-      <button id="uredi" type="button" class="btn btn-primary">
+      <button id="uredi8" type="button" class="btn btn-primary">
         UREDI POSTOJEĆU LINIJU
       </button></a
     >
 
     <br /><br />
     <a id="a_link" href="/obrisi">
-      <button id="obrisi" type="button" class="btn btn-primary">
+      <button id="obrisi8" type="button" class="btn btn-primary">
         OBRIŠI LINIJU
       </button></a
     >
     <br /><br />
     <a id="a_link" href="/prikaz">
-      <button id="prikaz" type="button" class="btn btn-primary">
+      <button id="prikaz8" type="button" class="btn btn-primary">
         PRIKAZ SVIH LINIJA
       </button></a
     >
@@ -27,7 +27,7 @@
 
 
 <style>
-#obrub {
+#obrub8 {
   width: 500px;
   height: auto;
   background-color: #4ab9ab;
@@ -37,14 +37,14 @@
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
 }
-#naslov {
+#naslov8 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
 }
-#inf {
+#inf8 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
@@ -53,7 +53,7 @@
   box-shadow: 5px 5px #e0e4e4;
 }
 
-#dodaj {
+#dodaj8 {
   width: 150px;
   height: 45px;
   margin: auto;
@@ -69,7 +69,7 @@
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 15px;
 }
-#uredi {
+#uredi8 {
   width: 150px;
   height: 45px;
   margin: auto;
@@ -85,7 +85,7 @@
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 10px;
 }
-#obrisi {
+#obrisi8 {
   width: 150px;
   height: 45px;
   margin: auto;
@@ -101,7 +101,7 @@
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 15px;
 }
-#prikaz {
+#prikaz8 {
   width: 150px;
   height: 45px;
   margin: auto;
@@ -118,19 +118,19 @@
   padding-top: 15px;
 }
 
-#dodaj:hover {
+#dodaj8:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }
-#uredi:hover {
+#uredi8:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }
-#obrisi:hover {
+#obrisi8:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }
-#prikaz:hover {
+#prikaz8:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }
@@ -143,7 +143,7 @@
   color: white;
 }
 @media screen and (max-width: 600px) {
-  #obrub {
+  #obrub8 {
     width: auto;
     height: auto;
     background-color: #4ab9ab;

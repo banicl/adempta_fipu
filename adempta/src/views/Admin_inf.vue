@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div id="slika_div">
+    <div id="slika_div1">
       <a href="/odabir_rada"
-        ><img id="slika_odabir" src="@/assets/home.png"
+        ><img id="slika_odabir1" src="@/assets/home.png"
       /></a>
     </div>
-    <div id="obrub" class="admin_inf">
-      <div id="inf"><h1 id="naslov">INFORMACIJE</h1></div>
-      <img id="slika" src="@/assets/admin.png" />
-      <label id="administrator">ADMINISTRATOR</label><br /><br />
-      <label id="email">EMAIL: {{ username }}</label>
+    <div id="obrub1" class="admin_inf">
+      <div id="inf1"><h1 id="naslov1">INFORMACIJE</h1></div>
+      <img id="slika1" src="@/assets/admin.png" />
+      <label id="administrator1">ADMINISTRATOR</label><br /><br />
+      <label id="email1">EMAIL: {{ username }}</label>
 
       <br /><br />
 
@@ -17,7 +17,7 @@
 
       <br /><br />
       <button
-        id="odjava"
+        id="odjava1"
         type="button"
         @click="logout()"
         class="btn btn-primary"
@@ -66,7 +66,7 @@ export default {
 };
 </script>
 <style>
-#obrub {
+#obrub1 {
   width: 500px;
   height: auto;
   background-color: #4ab9ab;
@@ -76,14 +76,14 @@ export default {
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
 }
-#naslov {
+#naslov1 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
 }
-#inf {
+#inf1 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
@@ -91,24 +91,24 @@ export default {
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
 }
-#email,
-#administrator {
+#email1,
+#administrator1 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #f5f4d2;
 }
-#administrator {
+#administrator1 {
   position: relative;
   left: 30px;
   bottom: 27px;
 }
-#email {
+#email1 {
   position: relative;
   left: 10px;
 }
-#odjava {
+#odjava1 {
   width: 100px;
   height: 40px;
   margin: auto;
@@ -124,21 +124,21 @@ export default {
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 13px;
 }
-#odjava:hover {
+#odjava1:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }
-#slika {
+#slika1 {
   width: 70px;
   height: 70px;
 }
-#slika_odabir {
+#slika_odabir1 {
   height: 38px;
   width: 38px;
   margin-top: 100px;
   padding-left: 10px;
 }
-#slika_div {
+#slika_div1 {
   width: 500px;
   height: auto;
   background-color: clear;
@@ -148,7 +148,7 @@ export default {
   border-radius: 15px;
 }
 @media screen and (max-width: 600px) {
-  #obrub {
+  #obrub1 {
     width: auto;
     height: auto;
     background-color: #4ab9ab;
@@ -159,13 +159,13 @@ export default {
     margin-top: 0;
   }
 
-  #slika_odabir {
+  #slika_odabir1 {
     height: 38px;
     width: 38px;
     margin-top: 15px;
     padding-left: 1px;
   }
-  #slika_div {
+  #slika_div1 {
     width: auto;
     height: 50px;
     background-color: clear;

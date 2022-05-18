@@ -1,37 +1,37 @@
 <template>
-  <div id="obrub" class="about">
-    <div id="naslov"><h1 id="naslov_login">LOGIN</h1></div>
+  <div id="obrub6" class="about">
+    <div id="naslov6"><h1 id="naslov_login6">LOGIN</h1></div>
 
     <div class="row">
       <div class="col"></div>
       <div class="col">
         <form>
           <div class="form-group">
-            <label id="email" for="exampleInputEmail1">EMAIL:</label
+            <label id="email6" for="exampleInputEmail1">EMAIL:</label
             ><br /><br />
             <input
               type="email"
               v-model="username"
               class="form-control"
-              id="emailunos"
+              id="emailunos6"
               aria-describedby="emailHelp"
               placeholder="Unesite email"
             /><br /><br />
             <small id="emailHelp" class="form-text text-muted"> </small>
           </div>
           <div class="form-group">
-            <label id="lozinka" for="exampleInputPassword1">LOZINKA:</label
+            <label id="lozinka6" for="exampleInputPassword1">LOZINKA:</label
             ><br /><br />
             <input
               v-model="password"
               type="password"
               class="form-control"
-              id="lozinkaunos"
+              id="lozinkaunos6"
               placeholder="Unesite lozinku"
             /><br /><br /><br />
           </div>
           <button
-            id="prijava"
+            id="prijava6"
             type="button"
             @click="login()"
             class="btn btn-primary"
@@ -75,7 +75,7 @@ export default {
 };
 </script>
 <style>
-#obrub {
+#obrub6 {
   width: 500px;
   height: auto;
   background-color: #4ab9ab;
@@ -85,14 +85,14 @@ export default {
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
 }
-#naslov_login {
+#naslov_login6 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   color: #4ab9ab;
 }
-#naslov {
+#naslov6 {
   width: auto;
   height: auto;
   background-color: #f5f4d2;
@@ -100,7 +100,7 @@ export default {
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
 }
-#email {
+#email6 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
@@ -108,7 +108,7 @@ export default {
   color: #f5f4d2;
   padding: auto;
 }
-#lozinka {
+#lozinka6 {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
@@ -116,7 +116,7 @@ export default {
   color: #f5f4d2;
   padding: 11px;
 }
-#emailunos {
+#emailunos6 {
   border-radius: 100px;
   border: none;
   width: 200px;
@@ -126,7 +126,7 @@ export default {
   display: grid;
   text-align: center;
 }
-#lozinkaunos {
+#lozinkaunos6 {
   border-radius: 100px;
   border: none;
   width: 200px;
@@ -136,7 +136,7 @@ export default {
   display: grid;
   text-align: center;
 }
-#prijava {
+#prijava6 {
   width: 100px;
   height: 40px;
   margin: auto;
@@ -152,12 +152,12 @@ export default {
   box-shadow: 5px 5px #e0e4e4;
   padding-top: 13px;
 }
-#prijava:hover {
+#prijava6:hover {
   background-color: #d2cbb6;
   cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-  #obrub {
+  #obrub6 {
     width: auto;
     height: auto;
     background-color: #4ab9ab;
