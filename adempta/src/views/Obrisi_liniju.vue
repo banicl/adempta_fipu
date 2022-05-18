@@ -14,7 +14,7 @@
         <label id="brisanje">Klikni na liniju koju želite obrisati.</label>
       </div>
       <br />
-      <div id="podaci" v-for="card in cards" :key="card.id">
+      <div v-for="card in cards" :key="card.id">
         <button
           id="obrisi"
           @click="obrisiLiniju(card.id)"
@@ -67,9 +67,11 @@ export default {
         .then(() => {
           console.log("Uspješno brisanje!");
           this.cards = this.cards.filter((card) => card.id !== id);
+          alert("Uspješno ste obrisali liniju.");
         })
         .catch((error) => {
           console.error("Greška prilikom brisanja: ", error);
+          alert("Greska prilikom brisanja linije.");
         });
     },
   },
@@ -80,7 +82,7 @@ export default {
 <style>
 #obrub {
   width: 500px;
-  height: auto;
+  height: 500px;
   background-color: #4ab9ab;
   margin: auto;
   margin-top: 5px;
@@ -140,6 +142,24 @@ export default {
   border-radius: 100px;
   font-weight: bold;
   color: #4ab9ab;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  display: block;
+  display: grid;
+}
+#obrisi:hover {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  width: 300px;
+  margin: auto;
+  height: 40px;
+  background-color: #a61c1c;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  font-weight: bold;
+  color: #f5f4d2;
   margin-bottom: 10px;
   padding-bottom: 30px;
   padding-top: 20px;

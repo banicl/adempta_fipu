@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="laptop">
+    <div id="laptop">
       <div>
         <router-link to="/pogreska"
           ><img id="os" src="@/assets/osijek.png"
@@ -32,63 +32,73 @@
 </template>
 
 <style>
+body {
+  overflow: hidden;
+}
+img {
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+img:hover {
+  opacity: 1;
+}
 .mob {
   display: none;
 }
 #os {
-  width: 23%;
-  padding: 5%;
+  width: 12%;
+  padding: 10%;
   padding-top: 50px;
 }
 #zg {
-  width: 23%;
-  padding: 5%;
+  width: 12%;
+  padding: 10%;
   padding-top: 50px;
 }
 #pu {
-  width: 23%;
-  padding: 5%;
+  width: 12%;
+  padding: 10%;
   padding-top: 50px;
 }
 #ri {
-  width: 23%;
-  padding: 5%;
+  width: 12%;
+  padding: 10%;
   padding-top: 50px;
 }
 #vz {
-  width: 23%;
-  padding: 5%;
+  width: 12%;
+  padding: 10%;
   padding-top: 50px;
 }
 #st {
-  width: 23%;
-  padding: 5%;
+  width: 12%;
+  padding: 10%;
   padding-top: 50px;
 }
 @media screen and (max-width: 600px) {
   #os {
-    width: 120px;
-    padding-left: 30px;
+    width: 40%;
+    padding: 5%;
   }
   #zg {
-    width: 120px;
-    padding-left: 20px;
+    width: 40%;
+    padding: 5%;
   }
   #pu {
-    width: 120px;
-    padding-left: 30px;
+    width: 40%;
+    padding: 5%;
   }
   #ri {
-    width: 120px;
-    padding-left: 20px;
+    width: 40%;
+    padding: 5%;
   }
   #vz {
-    width: 120px;
-    padding-left: 30px;
+    width: 40%;
+    padding: 5%;
   }
   #st {
-    width: 120px;
-    padding-left: 20px;
+    width: 40%;
+    padding: 5%;
   }
   .laptop {
     display: none;

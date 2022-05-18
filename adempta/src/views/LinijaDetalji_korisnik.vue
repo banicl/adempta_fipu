@@ -10,7 +10,11 @@
           <h1>{{ card.naziv }}</h1>
         </div>
       </div>
-      <br />
+      <div id="inf_broj">
+        <div id="naslov">
+          <h1>{{ card.broj_busa }}</h1>
+        </div>
+      </div>
       <ul>
         <div v-for="vrijeme in card.vrijeme" :key="vrijeme.id">
           <div id="podaci">{{ vrijeme }}</div>
@@ -52,6 +56,7 @@ export default {
             id: doc.id,
             vrijeme: data.vrijeme,
             naziv: data.naziv,
+            broj_busa: data.broj_busa,
           };
         } else {
           console.log("nema dokumenta 😥");
@@ -67,11 +72,12 @@ export default {
 
 <style>
 #obrub {
-  width: 500px;
-  height: auto;
+  width: 700px;
+  height: 500px;
   background-color: #4ab9ab;
   margin: auto;
   margin-top: 5px;
+  margin-top: 20px;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 5px #e0e4e4;
@@ -92,6 +98,13 @@ export default {
   border-radius: 100px;
   margin: auto;
   box-shadow: 5px 5px #e0e4e4;
+}
+#inf_broj {
+  width: 80px;
+  height: auto;
+  background-color: #f8f7e7;
+  border-radius: 100px;
+  margin: auto;
 }
 #slika_odabir {
   height: 38px;

@@ -5,7 +5,7 @@
     </div>
 
     <div id="obrub" class="home">
-      <div id="odabir_grada"><h1 id="naslov_grad">PULA-PROMET</h1></div>
+      <div id="odabir_grada"><h1 id="naslov_grad">PULA - PROMET</h1></div>
       <div v-for="card in cards" :key="card.id">
         <div id="podaci">
           <router-link
@@ -85,7 +85,7 @@ export default {
 }
 #obrub {
   width: 500px;
-  height: auto;
+  height: 620px;
   background-color: #4ab9ab;
   margin: auto;
   margin-top: 5px;

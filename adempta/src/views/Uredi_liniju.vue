@@ -19,14 +19,6 @@
       <br /><br />
       <br />
 
-      <label id="vrijeme" for="broj_busa">Unesite broj busa: </label><br />
-      <input
-        v-model="brbusa"
-        type="text"
-        class="form-control ml-2"
-        placeholder="Unesite broj vremena"
-        id="brojvrijeme"
-      /><br /><br />
       <label id="vrijeme" for="vrijemepolaska">VRIJEME POLASKA: </label
       ><br /><br />
       <label id="vrijeme" for="vrijemepolaska"
@@ -88,7 +80,7 @@ export default {
     };
   },
   mounted() {
-    getLinije();
+    this.getLinije();
   },
   methods: {
     debug() {
@@ -174,7 +166,7 @@ export default {
 <style>
 #obrub {
   width: 500px;
-  height: 500px;
+  height: 420px;
   background-color: #4ab9ab;
   margin: auto;
   margin-top: 5px;

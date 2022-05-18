@@ -65,7 +65,7 @@ export default {
 <style>
 #obrub {
   width: 500px;
-  height: auto;
+  height: 567px;
   background-color: #4ab9ab;
   margin: auto;
   margin-top: 5px;

@@ -67,6 +67,7 @@ export default {
           this.$router.replace({ name: "Odabir_rada" });
         })
         .catch(function (e) {
+          alert("Neispravna lozinka / email.");
           console.error("Greška", e);
         });
     },
